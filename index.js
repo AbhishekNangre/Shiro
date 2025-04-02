@@ -79,7 +79,7 @@ client
 console.log("Bot Token:", process.env.TOKEN ? "✅ Loaded" : "❌ Not Loaded");
 
 
-const PING_INTERVAL = 60 * 60 * 1000; 
+const PING_INTERVAL = 5 * 60 * 1000; 
 const SELF_URL = process.env.SELF_URL;
 
 const fetch = require("node-fetch");
