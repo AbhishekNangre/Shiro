@@ -5,7 +5,7 @@ ShiroBot is a simple yet efficient Discord bot with basic commands. More feature
 ## 📌 Current Features  
 - **Avatar Command** – Fetches a user’s profile picture.  
 - **Embed Command** – Creates a custom embed message.  
-- **Rock Paper Scissors (RPS) Command** – Play Rock, Paper, Scissors against the bot.  
+- **Rock Paper Scissors (RPS) Command** – Play Rock, Paper, Scissors against a user.  
 
 ## 📢 Upcoming Features  
 - **Help Command** – Displays all available commands.
