@@ -82,9 +82,13 @@ console.log("Bot Token:", process.env.TOKEN ? "✅ Loaded" : "❌ Not Loaded");
 const PING_INTERVAL = 5 * 60 * 1000; 
 const SELF_URL = process.env.SELF_URL;
 
-setInterval(() => {
-    fetch(SELF_URL)
-        .then((res) => res.text())
-        .then((body) => console.log(`✅ Keep-alive ping successful: ${body}`))
-        .catch((err) => console.error("❌ Keep-alive ping failed!", err));
-}, PING_INTERVAL);
+if (!SELF_URL) {
+    console.error("❌ SELF_URL is not set! Keep-alive ping disabled.");
+} else {
+    setInterval(() => {
+        fetch(SELF_URL)
+            .then((res) => res.text())
+            .then((body) => console.log(`✅ Keep-alive ping successful: ${body}`))
+            .catch((err) => console.error("❌ Keep-alive ping failed!", err));
+    }, PING_INTERVAL);
+}
